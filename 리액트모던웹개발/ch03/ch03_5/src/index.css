@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   display: inline-block;
 }
