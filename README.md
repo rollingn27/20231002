@@ -1,5 +1,5 @@
 # 20231002
-This is a repository for study. It is a place where we share what we have studied on different PCs.
+This is a repository for study. It is a place where I share what I have studied on different PCs.
 
 # 본격 리마인드 시작
 step1(10월 계획). 책 공부
