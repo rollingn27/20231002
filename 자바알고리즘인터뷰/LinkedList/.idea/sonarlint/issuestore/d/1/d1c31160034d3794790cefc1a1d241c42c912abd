@@ -1,0 +1,13 @@
+
+Z
+java:S1854
+"8Remove this useless assignment to local variable "num2".(æ¹ŠŞûÿÿÿÿ8¸Ÿóí¸1
+K
+java:S1481
+")Remove this unused "num2" local variable.(æ¹ŠŞûÿÿÿÿ8¹Ÿóí¸1
+_
+java:S16592"BDeclare "carry" and all following declarations on a separate line.(™˜É8¼Ÿóí¸1
+D
+java:S1659Q""Declare "node" on a separate line.(˜à‹şùÿÿÿÿ8½Ÿóí¸1
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ï¸öí¸1
