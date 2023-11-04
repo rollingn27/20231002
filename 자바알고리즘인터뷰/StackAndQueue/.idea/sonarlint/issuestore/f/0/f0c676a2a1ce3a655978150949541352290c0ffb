@@ -1,0 +1,6 @@
+
+`
+java:S1854">Remove this useless assignment to local variable "testString".(­ä¿úÿÿÿÿ8‹äÂÎ¹1
+Q
+java:S1481"/Remove this unused "testString" local variable.(­ä¿úÿÿÿÿ8‹äÂÎ¹1
+L	java:S106"+Replace this use of System.out by a logger.(™¯¤Õüÿÿÿÿ8‹äÂÎ¹1

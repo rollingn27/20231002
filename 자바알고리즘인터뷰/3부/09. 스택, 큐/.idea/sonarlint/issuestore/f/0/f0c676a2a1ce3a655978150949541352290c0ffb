@@ -1,0 +1,19 @@
+
+>
+java:S16042"(Make this anonymous inner class a lambda(Òõ“Ì
+R
+java:S49735"<Strings and Boxed types should be compared using "equals()".(­¬•œ
+R
+java:S4973R"<Strings and Boxed types should be compared using "equals()".(°ÇÝß
+0
+java:S1220""Move this file to a named package.
+E	java:S106"+Replace this use of System.out by a logger.(Î¶‰©þÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(òÈØ™
+=
+java:S1125"'Remove the unnecessary boolean literal.(„Š¹Ù
+G
+java:S3599I",Use another way to initialize this instance.(…ƒùžùÿÿÿÿ
+t
+java:S1171I"YMove the contents of this initializer to a standard constructor or to field initializers.(…ƒùžùÿÿÿÿ
+Y
+java:S1155V">Use isEmpty() to check whether the collection is empty or not.(í•ÇŸùÿÿÿÿ
