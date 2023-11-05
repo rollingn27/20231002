@@ -1,0 +1,14 @@
+
+e
+java:S22593"CA "NullPointerException" could be thrown; "headA" is nullable here.(ΤΨ’βϊÿÿÿÿ8§ισΉ1
+`
+java:S2259)"CA "NullPointerException" could be thrown; "headB" is nullable here.(½•Όδ8§ισΉ1
+e
+java:S2259."CA "NullPointerException" could be thrown; "headA" is nullable here.(ΤΨ’βϊÿÿÿÿ8§ισΉ1
+`
+java:S22594"CA "NullPointerException" could be thrown; "headB" is nullable here.(½•Όδ8§ισΉ1
+T
+java:S1854"7Remove this useless assignment to local variable "abc".(Ξύ΅8°·ΎςΉ1
+E
+java:S1481"(Remove this unused "abc" local variable.(Ξύ΅8°·ΎςΉ1
+G	java:S106"+Replace this use of System.out by a logger.(ΡΦ8„ιαςΉ1

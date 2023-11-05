@@ -6,9 +6,42 @@ import java.util.LinkedList;
 public class LinkedListTest {
 
     public static void main(String[] args) {
-        int[] num1 = { 1, 2, 3, 4, 5, 6 };
+        int[] num1 = { 1, 2, 3, 2, 1};
         int[] num2 = { 5, 6, 2 };
-        printLinkedList(swapPairs2(makeLinkedList(num1)));
+//        System.out.println((isPalindrome2(makeLinkedList(num1))));
+        printLinkedList(addTwoNumbers2(makeLinkedList(num1), makeLinkedList(num2)));
+    }
+
+    public static boolean isPalindrome2(ListNode head) {
+        ListNode fast = head, slow = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        if (fast != null) {
+            slow = slow.next;
+        }
+
+        ListNode rev = null;
+        while (slow != null) {
+            ListNode next = slow.next;
+            slow.next = rev;
+            rev = slow;
+            slow = next;
+        }
+
+        while (rev != null) {
+            if (rev.val != head.val) {
+                return false;
+            }
+
+            rev = rev.next;
+            head = head.next;
+        }
+
+        return true;
     }
 
     public static ListNode swapPairs2(ListNode head) {
