@@ -1,0 +1,12 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³²ÏÄıÿÿÿÿ8ñ×û »1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ã¯Ë8ñ×û »1
+F	java:S106"+Replace this use of System.out by a logger.(Ø¤58¿Øû »1
+L	java:S106	"+Replace this use of System.out by a logger.(ÑÕüïúÿÿÿÿ8¿Øû »1
+L	java:S106"+Replace this use of System.out by a logger.(à¡ÒÕøÿÿÿÿ8ÿîü »1
+E
+java:S1481)"(Remove this unused "idx" local variable.(Ç§ıé8¿Øû »1
+V
+java:S28640"4Iterate over the "entrySet" instead of the "keySet".(ßãîøÿÿÿÿ8¿Øû »1
+P
+java:S2864D"4Iterate over the "entrySet" instead of the "keySet".(ù‘€8¿Øû »1
