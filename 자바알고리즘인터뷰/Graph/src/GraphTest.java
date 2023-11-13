@@ -1,18 +1,156 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class GraphTest {
     public static void main(String[] args) {
-        char[][] grid = {
-                {'1', '1', '1', '1', '0'},
-                {'1', '1', '0', '1', '0'},
-                {'1', '1', '0', '1', '0'},
-                {'0', '0', '1', '1', '1'}};
+//        char[][] grid = {
+//                {'1', '1', '1', '1', '0'},
+//                {'1', '1', '0', '1', '0'},
+//                {'1', '1', '0', '1', '0'},
+//                {'0', '0', '1', '1', '1'}};
+//
+//        int[] nums = { 1, 2, 3, 4};
+//        System.out.println(combine(5, 3));
+        int[] candidates = { 2, 3, 5, 8, 1 };
+        int target = 9;
+        List<List<String>> tickets = new ArrayList<>();
+        tickets.add(Arrays.asList("JFK", "ICN"));
+        tickets.add(Arrays.asList("JFK", "ATL"));
+        tickets.add(Arrays.asList("ICN", "ATL"));
+        tickets.add(Arrays.asList("ATL", "ICN"));
+        tickets.add(Arrays.asList("ATL", "JFK"));
 
-        System.out.println(letterCombinations(("234")));
-        System.out.println(numIslands(grid));
+        System.out.println(findItinerary(tickets));
+    }
+
+    public static boolean dfs8(Map<Integer, List<Integer>> finishToTakeMap, Integer finish, List<Integer> takes) {
+        if (takes.contains(finish)){
+            return false;
+        }
+
+        if (finishToTakeMap.containsKey(finish)) {
+            takes.add(finish);
+            for(Integer take: finishToTakeMap.get(finish)) {
+                if (!dfs8(finishToTakeMap, take, takes))
+                    return false;
+            }
+            takes.remove(finish);
+        }
+
+        return true;
+    }
+
+    public static boolean canFinish(int numCourses, int[][] prerequisites) {
+        Map<Integer, List<Integer>> finishToTakeMap = new HashMap<>();
+        for (int[] pre: prerequisites) {
+            finishToTakeMap.putIfAbsent(pre[0], new ArrayList<>());
+            finishToTakeMap.get(pre[0]).add(pre[1]);
+        }
+
+        List<Integer> takes = new ArrayList<>();
+        for (Integer finish: finishToTakeMap.keySet()) {
+            if (!dfs8(finishToTakeMap, finish, takes)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void dfs7(List<String> results, Map<String, PriorityQueue<String>> fromToMap, String from) {
+        while (fromToMap.containsKey(from) && !fromToMap.get(from).isEmpty()) {
+            dfs7(results, fromToMap, fromToMap.get(from).poll());
+        }
+
+        results.add(0, from);
+    }
+    public static List<String> findItinerary(List<List<String>> tickets) {
+        List<String> results = new LinkedList<>();
+        Map<String, PriorityQueue<String>> fromToMap = new HashMap<>();
+
+        for (List<String> ticket: tickets) {
+            fromToMap.putIfAbsent(ticket.get(0), new PriorityQueue<>());
+            fromToMap.get(ticket.get(0)).add(ticket.get(1));
+        }
+
+        dfs7(results, fromToMap, "JFK");
+        return results;
+    }
+
+    public static void dfs6(List<List<Integer>> results, int[] nums, int index, LinkedList<Integer> elements) {
+        results.add(new ArrayList(elements));
+        for (int i = index; i < nums.length; i++) {
+            elements.add(nums[i]);
+            dfs6(results, nums, i + 1, elements);
+            elements.removeLast();
+        }
+    }
+
+    public static List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> results = new ArrayList<>();
+        dfs6(results, nums, 0, new LinkedList<>());
+        return results;
+    }
+
+    public static void dfs5(List<List<Integer>> results, int[] candidates, int target, int index, Deque<Integer> path) {
+        if (target < 0) {
+            return;
+        }
+
+        if (target == 0) {
+            results.add(new ArrayList<>(path));
+        }
+
+        for (int i = index; i < candidates.length; i++) {
+            path.add(candidates[i]);
+            dfs5(results, candidates, target - candidates[i], i, path);
+            path.removeLast();
+        }
+    }
+
+    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> results = new ArrayList<>();
+        dfs5(results, candidates, target, 0, new ArrayDeque<>());
+        return results;
+    }
+
+    public static void dfs4(List<List<Integer>> results, LinkedList<Integer> elements, int n, int start, int k) {
+        if (k == 0) {
+            results.add(elements.stream().collect(Collectors.toList()));
+            return;
+        }
+
+        for (int i = start; i <=n; i++) {
+            elements.add(i);
+            dfs4(results, elements, n, i + 1, k - 1);
+            elements.removeLast();
+        }
+    }
+    public static List<List<Integer>> combine(int n, int k) {
+
+        List<List<Integer>> results = new ArrayList<>();
+        dfs4(results, new LinkedList<>(), n, 1, k);
+        return results;
+    }
+    public static void dfs3(List<List<Integer>> results, List<Integer> prevElements, List<Integer> elements) {
+        if (elements.isEmpty()) {
+            results.add(prevElements.stream().collect(Collectors.toList()));
+        }
+
+        for (Integer e: elements) {
+            List<Integer> nextElements = new ArrayList<>(elements);
+            nextElements.remove(e);
+
+            prevElements.add(e);
+            dfs3(results, prevElements, nextElements);
+            prevElements.remove(e);
+        }
+    }
+
+    public static List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> results = new ArrayList<>();
+        List<Integer> lst = Arrays.stream(nums).boxed().collect(Collectors.toList());
+        dfs3(results, new ArrayList<>(), lst);
+        return results;
     }
 
     public static void dfs2(List<String> result, Map<Character, List<Character>> dic, String digits, int index, StringBuilder path) {
