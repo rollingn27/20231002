@@ -4,7 +4,8 @@ public class StackAndQueue {
     public static void main(String[] args) {
         String testString = "dbacdcbc";
         int[] temperatures = { 23, 24, 25, 21, 19, 22, 26, 23 };
-        System.out.println(Arrays.toString(dailyTemperatures(temperatures)));
+        System.out.println(removeDuplicateLetters(testString));
+        System.out.println(removeDuplicateLetters(testString));
     }
 
     public static int[] dailyTemperatures(int[] temperatures) {

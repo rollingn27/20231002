@@ -8,10 +8,11 @@ public class GraphTest {
         char[][] grid = {
                 {'1', '1', '1', '1', '0'},
                 {'1', '1', '0', '1', '0'},
-                {'1', '1', '0', '0', '0'},
-                {'0', '0', '1', '0', '1'}};
+                {'1', '1', '0', '1', '0'},
+                {'0', '0', '1', '1', '1'}};
 
         System.out.println(letterCombinations(("234")));
+        System.out.println(numIslands(grid));
     }
 
     public static void dfs2(List<String> result, Map<Character, List<Character>> dic, String digits, int index, StringBuilder path) {

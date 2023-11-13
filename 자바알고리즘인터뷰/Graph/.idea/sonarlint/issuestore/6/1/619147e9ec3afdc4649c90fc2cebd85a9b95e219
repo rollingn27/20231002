@@ -1,5 +1,3 @@
 
-U
-java:S1854"8Remove this useless assignment to local variable "grid".(≤ü ÷8›÷§¿ª1
-F
-java:S1481")Remove this unused "grid" local variable.(≤ü ÷8ﬁ÷§¿ª1
+G	java:S106"+Replace this use of System.out by a logger.(¢˜í“8ê¶∆ëº1
+F	java:S106"+Replace this use of System.out by a logger.(˙ÒªY8ï„›ëº1
