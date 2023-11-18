@@ -19,8 +19,8 @@ public class GraphTest {
         tickets.add(Arrays.asList("ICN", "ATL"));
         tickets.add(Arrays.asList("ATL", "ICN"));
         tickets.add(Arrays.asList("ATL", "JFK"));
-
-        System.out.println(findItinerary(tickets));
+        System.out.println(letterCombinations("25"));
+        System.out.println(findItinerary2(tickets));
     }
 
     public static boolean dfs8(Map<Integer, List<Integer>> finishToTakeMap, Integer finish, List<Integer> takes) {
@@ -62,6 +62,30 @@ public class GraphTest {
         }
 
         results.add(0, from);
+    }
+
+    public static List<String> findItinerary2(List<List<String>> tickets) {
+
+        Map<String, PriorityQueue<String>> fromToMap = new HashMap<>();
+
+        for (List<String> ticket: tickets) {
+            fromToMap.putIfAbsent(ticket.get(0), new PriorityQueue<>());
+            fromToMap.get(ticket.get(0)).add(ticket.get(1));
+        }
+
+        List<String> results = new LinkedList<>();
+        Deque<String> stack = new ArrayDeque<>();
+
+        stack.push("JFK");
+        while (!stack.isEmpty()) {
+            while (fromToMap.containsKey(stack.peek()) && !fromToMap.get(stack.peek()).isEmpty()) {
+                stack.push(fromToMap.get(stack.peek()).poll());
+            }
+
+            results.add(0, stack.pop());
+        }
+
+        return results;
     }
     public static List<String> findItinerary(List<List<String>> tickets) {
         List<String> results = new LinkedList<>();
@@ -154,6 +178,7 @@ public class GraphTest {
     }
 
     public static void dfs2(List<String> result, Map<Character, List<Character>> dic, String digits, int index, StringBuilder path) {
+
         if (path.length() == digits.length()) {
             result.add(String.valueOf(path));
             return;

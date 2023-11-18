@@ -1,19 +1,20 @@
 
 L
-java:S3740P"/Provide the parametrized type for this generic.(¯åñ8áÆ™¸¼1
+java:S3740h"/Provide the parametrized type for this generic.(¯åñ8ı¸è¾1
 †
-java:S1319O"iThe type of "elements" should be an interface such as "List" rather than the implementation "LinkedList".(³×Æ³8áÆ™¸¼1
-†
-java:S1319t"iThe type of "elements" should be an interface such as "List" rather than the implementation "LinkedList".(µ´±ƒ8áÆ™¸¼1
+java:S1319g"iThe type of "elements" should be an interface such as "List" rather than the implementation "LinkedList".(³×Æ³8ı¸è¾1
+‡
+java:S1319Œ"iThe type of "elements" should be an interface such as "List" rather than the implementation "LinkedList".(µ´±ƒ8ı¸è¾1
 \
-java:S1854":Remove this useless assignment to local variable "target".(Ü§Ùâÿÿÿÿÿ8€Ç™¸¼1
+java:S1854":Remove this useless assignment to local variable "target".(Ü§Ùâÿÿÿÿÿ8¬¹è¾1
 [
-java:S1854">Remove this useless assignment to local variable "candidates".(¬Ëë°8€Ç™¸¼1
-]	java:S125"<This block of commented-out lines of code should be removed.(ç¤ª¶ùÿÿÿÿ8€Ç™¸¼1
+java:S1854">Remove this useless assignment to local variable "candidates".(¬Ëë°8¬¹è¾1
+]	java:S125"<This block of commented-out lines of code should be removed.(ç¤ª¶ùÿÿÿÿ8¬¹è¾1
 L
-java:S1481"/Remove this unused "candidates" local variable.(¬Ëë°8€Ç™¸¼1
+java:S1481"/Remove this unused "candidates" local variable.(¬Ëë°8¬¹è¾1
 M
-java:S1481"+Remove this unused "target" local variable.(Ü§Ùâÿÿÿÿÿ8€Ç™¸¼1
-G	java:S106"+Replace this use of System.out by a logger.(üé¾Ø8€Ç™¸¼1
+java:S1481"+Remove this unused "target" local variable.(Ü§Ùâÿÿÿÿÿ8¬¹è¾1
+G	java:S106"+Replace this use of System.out by a logger.(¨èã©8¬¹è¾1
+G	java:S106"+Replace this use of System.out by a logger.(ºº¥8¬¹è¾1
 N
-java:S1172+"1Remove this unused method parameter "numCourses".(Øßı°8Ç™¸¼1
+java:S1172+"1Remove this unused method parameter "numCourses".(Øßı°8¬¹è¾1
