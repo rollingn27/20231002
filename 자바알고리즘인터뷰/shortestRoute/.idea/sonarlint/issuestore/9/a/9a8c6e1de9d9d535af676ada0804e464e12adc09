@@ -1,0 +1,13 @@
+
+m	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ­“¿8Å£­¾1
+k
+java:S3824Š"HReplace this "Map.containsKey()" with a call to "Map.computeIfAbsent()".(Êš®Ùúÿÿÿÿ8¶“£­¾1
+V
+java:S1854"9Remove this useless assignment to local variable "times".(‹šğ¨8Å“£­¾1
+G
+java:S1481"*Remove this unused "times" local variable.(‹šğ¨8Å“£­¾1
+L	java:S106"+Replace this use of System.out by a logger.(ĞÖãèûÿÿÿÿ8Å“£­¾1
+o
+java:S3776J"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ô¼ĞÊ8Å“£­¾1
+E
+java:S1172J"(Remove this unused method parameter "n".(ô¼ĞÊ8Å“£­¾1
